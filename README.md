@@ -1,4 +1,4 @@
 # Google Software Product Sprint
 
 
-This repo conatins Tyler Jedziniak's portfolio and SPS projects.
+This repo contains Tyler Jedziniak's portfolio and SPS projects.
