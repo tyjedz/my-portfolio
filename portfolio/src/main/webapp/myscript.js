@@ -9,7 +9,9 @@
   */
 async function showMessage(){
     const response = await fetch("/hello");
-    const text = await response.text();
+    const json = await response.json();
+    let randnum = Math.floor(Math.random()*3);
+    const text = json[randnum];
     const container = document.getElementById("message");
-    container.innerText = text.slice(4,text.length - 6);
+    container.innerText = text;
 }
