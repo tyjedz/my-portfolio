@@ -23,13 +23,13 @@ public class FormHandlerServlet extends HttpServlet {
     long timestamp = System.currentTimeMillis();
 
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
-    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Task");
-    FullEntity taskEntity =
+    KeyFactory keyFactory = datastore.newKeyFactory().setKind("Message");
+    FullEntity messageEntity =
         Entity.newBuilder(keyFactory.newKey())
             .set("title", textValue)
             .set("timestamp", timestamp)
             .build();
-    datastore.put(taskEntity);
+    datastore.put(messageEntity);
     // Print the value so you can see it in the server logs.
     System.out.println("User submitted: " + textValue);
 
